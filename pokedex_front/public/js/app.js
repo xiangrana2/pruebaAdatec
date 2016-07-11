@@ -2,6 +2,7 @@
 (function () {
 	var app = angular.module('pokedex', [
 		'ngRoute',
+		'httpPostFix',
 		'pokedex.services'
 	]);
 
