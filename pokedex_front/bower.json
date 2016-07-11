@@ -1,0 +1,18 @@
+{
+  "name": "pokedex",
+  "authors": [
+    "Adatec"
+  ],
+  "description": "Pokedex proof project",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "angular-route": "~1.4.8",
+    "angular": "~1.5.5",
+    "angular-mocks": "~1.5.5",
+    "lodash": "~3.10.1"
+  }
+}

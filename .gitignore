@@ -1,0 +1,14 @@
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+pokedex_front/node_modules
+pokedex_front/*.log
+
+# sass cache folder
+.sass-cache/*
+pokedex_front/public/bower_components
+pokedex_front/.tmp
+
+venv
