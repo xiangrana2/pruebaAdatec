@@ -12,3 +12,6 @@ pokedex_front/public/bower_components
 pokedex_front/.tmp
 
 venv
+
+pokedex_back/db.sqlite3
+*/*/__pycache__/*
