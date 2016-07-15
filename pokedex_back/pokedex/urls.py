@@ -13,14 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import include, url
 from django.contrib import admin
-
+from django.conf.urls import include, url
 from rest_framework.urlpatterns import format_suffix_patterns
+
+from pokemon import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^pokemons/$', views.PokemonList.as_view(), name='pokemons-list'),
+    url(r'^pokemons/(?P<pk>[0-9]+)/$', views.PokemonDetail.as_view(), name='pokemons-detail'),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

@@ -1,3 +1,5 @@
+*.pyc
+
 ### OSX ###
 .DS_Store
 .AppleDouble
