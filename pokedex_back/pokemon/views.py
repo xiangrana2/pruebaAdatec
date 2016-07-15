@@ -38,6 +38,9 @@ class PokemonDetail(APIView):
 
 
 class PokemonList(APIView):
+    """
+    Retrieve a list of Pokemones or create a Pokemon instance.
+    """
     def get(self, request, format=None):
         pokemons = Pokemon.objects.all()
         serializer = PokemonSerializer(pokemons, many=True)
