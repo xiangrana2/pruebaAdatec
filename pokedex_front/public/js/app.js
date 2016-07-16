@@ -15,7 +15,11 @@
       .when('/list/', {
             templateUrl: 'views/pokedex.html',
             controller: 'PokedexController'
-        })
+      })
+      .when('/add/', {
+        templateUrl: 'views/pokemon-creation.html',
+        controller: 'postController'
+      })
   }]);
 
 })();

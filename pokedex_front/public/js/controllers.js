@@ -16,6 +16,30 @@
       }
 
     }])
+    .controller('postController', function($scope, $http) {
+        // create a blank object to handle form data.
+        $scope.formData = {};
+        // calling our submit function.
+        $scope.submitForm = function() {
+
+        // clean message text.
+        $('#messages').empty();
+
+        $http({
+          method  : 'POST',
+          url     : 'http://localhost:8000/pokemons/',
+          data    : $.param($scope.formData),
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+          .success(function(data) {
+            $('#messages').append('<p>' + "Pokemon successfuly created." +  '</p>');
+            $scope.formData = {};
+          })
+          .error(function(data, status) {
+            $('#messages').append('<p>' + "Pokemon couldn't be created. Please check values." +  '</p>');
+          });
+        };
+    })
     .controller('TabsController', function () {
       this.tab = 1;
 
